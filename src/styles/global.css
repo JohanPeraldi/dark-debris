@@ -1,34 +1,29 @@
 :root {
-  /* COLORS  */
-  --color-primary-0: #162f16;
-  --color-primary-10: #0c6980;
-  --color-primary-20: #00a8a8;
-  --color-primary-30: #b1e0e4;
+  /* BASE COLORS  */
+  --color-primary-100: #162f16;
+  --color-primary-200: #0c6980;
+  --color-primary-300: #00a8a8;
+  --color-primary-400: #b1e0e4;
+  --color-primary-dark: var(--color-primary-200);
+  --color-primary-light: var(--color-primary-400);
+  --color-primary-medium: var(--color-primary-300);
 
-  --background-color-dark: var(--color-primary-0);
-  --color-primary-dark: var(--color-primary-10);
-  --color-primary-light: var(--color-primary-30);
-  --color-primary-medium: var(--color-primary-20);
+  /* SEMANTIC COLORS */
+  --background-color-dark: var(--color-primary-100);
   --site-bg: var(--background-color-dark);
-
-  /* SPACING */
-  --max-width: 108rem;
-
-  /* TEXT */
   --hero-bg: linear-gradient(
     -54deg,
-    var(--color-primary-0) -23%,
+    var(--color-primary-100) -23%,
     var(--color-primary-medium),
-    var(--color-primary-0) 51%
+    var(--color-primary-100) 51%
   );
 
+  /* TEXT COLORS */
   --text-gradient: linear-gradient(
     270deg,
     var(--color-primary-dark) 0%,
     var(--color-primary-medium) 60%
   );
-
-  --color-text-light: var(--color-primary-light);
 }
 
 * {
@@ -44,14 +39,7 @@ html {
 body {
   width: 100%;
   background: var(--site-bg);
-}
-
-main {
-  align-self: center;
-}
-
-p {
-  color: var(--color-text-light);
+  /* color: var(--color-text-light); */
 }
 
 .color__gradient {
@@ -59,10 +47,6 @@ p {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.max__width {
-  max-width: 117.8rem;
 }
 
 .kodchasan-extralight {

@@ -6,23 +6,21 @@ import './header.css';
 const { origin } = Astro.props;
 ---
 
-<header
-  class="fixed z-10 flex w-full items-center justify-center p-8 text-[var(--color-primary-light)] md:p-4"
->
+<header class="fixed z-10 flex w-full items-center justify-center p-8 text-primary-400 md:p-4">
   <div
-    class="header-container flex min-h-[7rem] w-full items-center justify-between rounded-[14px] border border-[#00a8a8] px-4 py-4 sm:px-8"
+    class="header-container flex min-h-28 w-full items-center justify-between rounded-xl border border-primary-300 px-4 py-4 sm:px-8"
   >
     <Logo name="Johan Peraldi" />
     {/* Menu button for mobile */}
     <button
-      class="menu-btn flex items-center justify-center rounded-full border-2 border-[#00a8a8] bg-[var(--hero-bg)] px-4 py-2 text-[#00a8a8] sm:px-8 md:hidden"
+      class="menu-btn flex items-center justify-center rounded-full border-2 border-primary-300 bg-primary-100 px-4 py-2 text-primary-300 sm:px-8 md:hidden"
     >
       Menu
     </button>
-    <nav class="links mobile-nav flex gap-[22px]" tabindex="0">
+    <nav class="links mobile-nav flex gap-6" tabindex="0">
       {/* Navigation list */}
       <ul
-        class="nav-list mr-[4.4rem] flex items-center justify-evenly gap-8 md:z-10 md:m-0 md:w-full md:justify-center md:self-center md:rounded-full md:border md:border-[var(--color-primary-medium)] md:px-6 md:py-3 md:text-2xl"
+        class="nav-list mr-16 flex items-center justify-evenly gap-8 md:z-10 md:m-0 md:w-full md:justify-center md:self-center md:rounded-full md:border md:border-primary-300 md:px-6 md:py-3 md:text-2xl"
       >
         {
           origin.map((data: { content: string; icon: string; link: string }) => (

@@ -1,9 +1,13 @@
 ---
 import Header from '../components/Header/Header.astro';
+import Hero from '../components/Hero/Hero.astro';
 import { mainMenu } from '../data/menuData';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
   <Header origin={mainMenu} />
+  <main class="w-full self-center">
+    <Hero />
+  </main>
 </Layout>
