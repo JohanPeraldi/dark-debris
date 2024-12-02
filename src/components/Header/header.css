@@ -1,0 +1,70 @@
+/* Complex hover animation for links */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary-medium);
+  transform: scaleX(0);
+  transform-origin: 0;
+  transition: 0.35s transform;
+}
+
+.nav-link:hover {
+  color: var(--color-primary-medium);
+}
+
+.nav-link:hover::after {
+  transform: scale(1);
+}
+
+/* Mobile menu interactions */
+@media screen and (max-width: 768px) {
+  .header-container {
+    position: relative;
+  }
+
+  .menu-btn {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: linear scroll-btn;
+    animation-timeline: scroll();
+  }
+
+  .mobile-nav {
+    pointer-events: none;
+  }
+
+  .mobile-nav:focus-within .nav-list {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .mobile-nav:focus-within .menu-btn {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobile-nav:not(:hover) .nav-list {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes scroll-btn {
+  0%,
+  1% {
+    opacity: 0;
+  }
+  2% {
+    opacity: inherit;
+  }
+}

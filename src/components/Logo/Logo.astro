@@ -1,0 +1,12 @@
+---
+const { name } = Astro.props;
+---
+
+<a href="/" class="flex min-w-fit items-center gap-3 rounded-full sm:gap-6">
+  <div
+    class="flex-shrink-0 transform overflow-hidden rounded-full transition-transform duration-300 hover:scale-110"
+  >
+    <img src="/img/my_logo.webp" alt="logo" width="40px" height="40px" />
+  </div>
+  <h3 class="color__gradient whitespace-nowrap text-xl sm:text-3xl">{name}</h3>
+</a>
