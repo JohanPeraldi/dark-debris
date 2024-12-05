@@ -1,0 +1,40 @@
+---
+/* import SocialIcons from '../SocialIcons.astro';
+import Title from '../atoms/Title.astro'; */
+import { Image } from 'astro:assets';
+import myAvatar from '../../assets/avatar_in_office.png';
+---
+
+<section id="about" class="flex h-screen w-full items-center justify-center">
+  <div
+    class="flex flex-col items-center justify-around gap-16 px-12 py-32 md:flex-row md:px-52 md:py-44"
+  >
+    <Image
+      class="img h-96 min-h-96 w-72 min-w-72 rounded-3xl bg-primary-100 object-contain md:h-[32rem] md:min-h-[32rem] md:w-96 md:min-w-96 md:rounded-full"
+      src={myAvatar}
+      alt="Johan's avatar"
+    />
+
+    <div class="flex max-w-[75rem] flex-col justify-center gap-8">
+      <!-- <Title margin="1rem" contenido="About me" /> -->
+      <p
+        class="kodchasan-extralight max-w-4xl text-xl leading-normal text-primary-400 sm:text-2xl sm:leading-normal md:max-w-6xl md:text-2xl md:leading-normal lg:text-3xl lg:leading-normal"
+      >
+        I'm a Franco-British web developer with core expertise in JavaScript and its ecosystem,
+        including React and Node.js. Quick to learn new tools, I bring strong organisational
+        abilities and adaptability through effective communication. I'm currently seeking remote
+        opportunities from Tallinn, Estonia, and I am available for full-time positions and
+        freelance projects.
+      </p>
+      <!-- <SocialIcons width="25" height="25" /> -->
+    </div>
+  </div>
+</section>
+
+<style>
+  .img {
+    /* Does not work */
+    mask-image: radial-gradient(ellipse, var(--color-primary-100) 53%, white 68%);
+    -webkit-mask-image: radial-gradient(ellipse, var(--color-primary-100) 53%, white 68%);
+  }
+</style>
