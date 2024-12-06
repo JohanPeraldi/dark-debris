@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../../assets/my_logo.webp';
+
 const { name } = Astro.props;
 ---
 
@@ -6,7 +9,7 @@ const { name } = Astro.props;
   <div
     class="flex-shrink-0 transform overflow-hidden rounded-full transition-transform duration-300 hover:scale-110"
   >
-    <img src="/img/my_logo.webp" alt="logo" width="40px" height="40px" />
+    <Image src={logo} alt="logo" width="40" height="40" priority />
   </div>
   <h3 class="color__gradient whitespace-nowrap text-xl sm:text-3xl">{name}</h3>
 </a>

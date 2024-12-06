@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import Button from '../Button/Button.astro';
 import Heading from '../Heading/Heading.astro';
+import myAvatar from '../../assets/avatar_in_front_of_computer_square.png';
 ---
 
 <section
@@ -17,12 +19,14 @@ import Heading from '../Heading/Heading.astro';
       <Button href="#contact" text="Contact" />
     </div>
 
-    <img
+    <Image
       class="h-auto w-full max-w-96 rounded-full md:max-w-xl"
-      src="/img/avatar_in_front_of_computer_square.png"
+      src={myAvatar}
       alt="Johan's avatar"
+      layout="responsive"
       width="360"
       height="360"
+      priority
     />
   </div>
 </section>
