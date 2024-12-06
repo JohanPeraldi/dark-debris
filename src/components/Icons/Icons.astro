@@ -1,0 +1,46 @@
+---
+const { width, height } = Astro.props;
+const icons = [
+  {
+    title: 'LinkedIn',
+    icon: 'simple-icons:linkedin',
+    href: 'https://www.linkedin.com/in/johan-peraldi/',
+    label: 'View my LinkedIn profile',
+  },
+  {
+    title: 'CV',
+    icon: 'tabler:file-cv',
+    href: '/docs/blank.pdf',
+    label: 'Download my resume PDF',
+  },
+];
+---
+
+<div class="flex w-40 items-start justify-start gap-8">
+  {
+    icons.map((data) => (
+      <a
+        href={data.href}
+        target="_blank"
+        rel="nofollow noreferrer noopener"
+        aria-label={data.label}
+      >
+        <iconify-icon
+          class={`text-primary-400 transition-colors ${data.title.toLowerCase()}`}
+          icon={data.icon}
+          width={width}
+          height={height}
+        />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .linkedin:hover {
+    color: var(--color-linkedin);
+  }
+  .cv:hover {
+    color: var(--color-pdf);
+  }
+</style>

@@ -17,6 +17,8 @@
     var(--color-primary-medium),
     var(--color-primary-100) 51%
   );
+  --color-linkedin: #0073b1;
+  --color-pdf: #dc3545;
 
   /* TEXT COLORS */
   --text-gradient: linear-gradient(
