@@ -1,0 +1,31 @@
+---
+interface Props {
+  content: string;
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
+}
+
+const {
+  content,
+  level = 2, // Default to h2 if no level is provided
+} = Astro.props;
+
+// Define level-specific classes
+const levelClasses = {
+  1: 'kodchasan-semibold text-5xl sm:text-6xl md:text-7xl',
+  2: 'kodchasan-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl',
+  3: 'kodchasan-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl',
+  4: 'kodchasan-regular text-2xl sm:text-3xl md:text-4xl lg:text-5xl',
+  5: 'kodchasan-regular-italic text-xl sm:text-2xl md:text-3xl lg:text-4xl',
+  6: 'kodchasan-regular-italic text-lg sm:text-xl md:text-2xl lg:text-3xl',
+};
+
+// Map the level to the corresponding HTML heading tag
+const HeadingTag = `h${level}` as const;
+
+// Get the classes for the specific level
+const classes = `${levelClasses[level]} text-primary-300`;
+---
+
+<HeadingTag class={classes}>
+  {content}
+</HeadingTag>

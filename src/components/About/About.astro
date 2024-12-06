@@ -1,7 +1,7 @@
 ---
-/* import SocialIcons from '../SocialIcons.astro';
-import Title from '../atoms/Title.astro'; */
 import { Image } from 'astro:assets';
+import Heading from '../Heading/Heading.astro';
+/* import SocialIcons from '../SocialIcons.astro'; */
 import myAvatar from '../../assets/avatar_in_office.png';
 ---
 
@@ -16,7 +16,7 @@ import myAvatar from '../../assets/avatar_in_office.png';
     />
 
     <div class="flex max-w-[75rem] flex-col justify-center gap-8">
-      <!-- <Title margin="1rem" contenido="About me" /> -->
+      <Heading level={2} content="About me" />
       <p
         class="kodchasan-extralight max-w-4xl text-xl leading-normal text-primary-400 sm:text-2xl sm:leading-normal md:max-w-6xl md:text-2xl md:leading-normal lg:text-3xl lg:leading-normal"
       >
